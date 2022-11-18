@@ -150,7 +150,7 @@ var cnItems = {
     "You'll have more options during a scandal": "在丑闻期间你会有更多选择",
     "They have promoted you to oversee the improvement of common product lines. This\n        gives you unprecedented access to the company and its technology labs. You\n        immediately start making plans for a flawed product. Of course, you have to work\n        on profitable products too. You're now directly responsible for a small but\n        noticeable improvement in the company's net worth.": "他们提拔你监督共同产品线的改进。 这\n 让您可以前所未有地访问公司及其技术实验室。 您\n 立即开始为有缺陷的产品制定计划。 当然，你也必须在盈利的产品上工作。 您现在直接负责公司净资产的小幅但\n 显着改善。",
     "A mid-level management job improving profitability, try for promotion": "提高盈利能力的中层管理工作，争取晋升",
-    "Break Equipment-": "破碎设备-",
+    "Break Equipment-": "破坏设备-",
     "Change capabilities": "改变能力",
     "Defective Products-": "有缺陷的产品-",
     "IT Training": "信息技术培训",
