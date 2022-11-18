@@ -103,7 +103,7 @@ var cnItems = {
     "Products with a low profit margin, managers work to upgrade these to make them good, faster the more there are": "利润率低的产品，经理们努力升级这些产品，使它们变得更好，越快越好",
     "Products with a medium profit margin, managers work to upgrade these to make them great, faster the more there are": "具有中等利润率的产品，经理们努力升级这些产品，使它们变得更好，越快越好",
     "Reduce good products to common ones": "将好产品降为普通产品",
-    "Reduce great products to good ones": "将优质产品简化为优质产品",
+    "Reduce great products to good ones": "将优质产品简化为好产品",
     "Sabotage+": "破坏+",
     "Switch Labels-": "切换标签-",
     "Time left in trending mode, with 2x income": "趋势模式剩余时间，收入 2 倍",
