@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="d3.v5.min.js"></script>
+    <script src='newgroundsio.min.js'></script>
+    <script type="module">
+      import init, { handle_click, save_game, reset_game } from './youre_a_spy.js'
+      window.handle_click = handle_click
+      window.save_game = save_game
+      window.reset_game = reset_game
+      init()
+    </script>
+  </head>
+  <body>
+    <script src="chs.js"></script>
+    <script src="core.js"></script>
+    <game>
+      <header>
+        <span class="title">You're a Spy</span>
+        <tab>
+          Game
+        <popout><div id="game_tab">
+          <div id="reset">
+            <button onclick="if(confirm('Abandon this game and all progress?')){reset_game()}">Hard Reset</button>
+            This starts the game over from the beginning, removes all progress and achievements. Only use it if the game is corrupted or you want a fresh start.
+          </div>
+<!--           <div id="export">
+            <form><input type="text" id="input1"></form>
+            <button onclick="document.getElementById('input1').value = localStorage.getItem('xxx-world0');">Get Current</button>
+            Use this to export your game. Click the button to get it and then use a keyboard shortcut to cut the text. Paste elsewhere to save.
+          </div>
+ -->        </div></popout></tab>
+        <tab>
+          Achievements
+        <popout>
+          <panel id="achievement"></panel>
+          <hr>
+          <panel id="long_achievement"></panel>
+        </popout></tab>
+        <tab>
+          Credits and Social
+        <popout><div id="social_tab">
+          <div id="author">Game by Kygron [<a href="https://kygron.newgrounds.com/">newgrounds</a>,<a href="https://twitter.com/Kygron2">twitter</a>]</div>
+          <div id="discord">
+            <a href="https://discord.gg/FPQq2nr" target="_blank">Discord</a>: Chat with other players of this and similar games. 
+          </div>
+          <div>Thanks to all the players for trying out the game! Please share with your friends!</div>
+          <div id="patreon">
+            <a href="https://www.patreon.com/kygron" target="_blank">Patreon</a>: Please support the author to ensure that more games can be created in the future!
+          </div>
+          <div id="patrons">
+            Please join in thanking the following people for supporting this game in development!
+            <ul>
+              <li>Anthony Toney</li>
+            </ul>
+          </div>
+        </div></popout></tab>
+      </header>
+      <main>
+        <screen id="full_screen" message="1">
+          <screen id="message">
+            <message>
+               You've been hired into your competitor's company. They have a full incremental
+               stack set up, multipliers and all, to increase their net worth. It's your job
+               to infiltrate their company, undermine their systems, and shrink their net worth
+               all the way down to nothing. At the moment you have no knowledge of their systems
+               and no power. You should start by getting a promotion.
+            </message>
+          </screen>
+          <panel id="challenge"></panel>
+          <clickers id="message_clickers">
+            <clicker id="fake_clicker">Loading...
+            </clicker>
+          </clickers>
+        </screen>
+        <panel id="worth"></panel>
+        <panel id="main_bars"></panel>
+        <panel id="area_tabs"></panel>
+        <panel id="area">
+          <panel id="things"></panel>
+          <panel id="actions"></panel>
+        </panel>
+        <panel id="missions">
+          <panel id="mission_desc"></panel>
+          <panel id="mission_items"></panel>
+        <panel id="messages"></panel>
+      </main>
+    </game>
+    <debug id="debug_but"></debug>
+    <debug id="debug"></debug>
+<!--客服 开始-->
+<script src="//g8hh.github.io/static/js/jquery.min.js"></script>
+<link rel="stylesheet" href="//g8hh.github.io/static/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="//g8hh.github.io/static/js/kf.js"></script>
+<!-- 客服 结束 -->
+<!--站长统计-->
+    <div style="display: none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?828597e93cee632465679b7ef35edfd5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>    </div>
+  </body>
+</html>

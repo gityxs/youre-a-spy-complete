@@ -1,0 +1,293 @@
+html,body {
+  background-color: #eee;
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  font-size: 14;
+}
+game {
+  position: relative;
+  display: block;
+  width: 500px;
+  height: 350px;
+  margin: 0em;
+  padding: 0em;
+  background-color: white;
+  overflow: hidden;
+  border: 0.1em solid grey;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #EEE;
+}
+header .title {
+  font-size: 150%;
+  margin: 2px 2px 0px 2px;
+}
+tab {
+  display: inline-block;
+  user-select: none;
+  margin: 2px 2px 0px 2px;
+  padding: 5px;
+  background-color: #DDD;
+}
+tab popout {
+  display: none;
+}
+tab:hover {
+  background-color: white;
+}
+
+/* tab:nth-child(3) popout, */
+tab:hover popout
+{
+  display: block;
+  position: absolute;
+  background-color: white;
+  left: 0px;
+  right: 0px;
+  top: 28px;
+  bottom: 0px;
+  z-index: 2;
+}
+
+#game_tab,
+#social_tab {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  height: 100%;
+  margin: 25px;
+}
+
+#achievement, #long_achievement {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: start;
+  justify-content: space-evenly;
+  position: relative;
+  font-size: 100%;
+}
+#achievement value, #long_achievement value {
+  display: block;
+  margin: 0.6em;
+}
+#achievement value:hover desc {
+  display: block;
+  position: absolute;
+  border: 1px solid blue;
+  font-size: 100%;
+  z-index: 1;
+}
+
+#full_screen[message="0"] {
+  display:none;
+}
+#full_screen desc {
+  display: none;
+}
+#full_screen {
+  display: block;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 28px;
+  bottom: 0px;
+  background: white;
+  font-size: 200%;
+  z-index: 1;
+}
+#message message {
+  display: block;
+  margin: 0.5em;
+  font-size: 70%;
+}
+#message_clickers {
+  display: block;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+value {
+  display: block;
+}
+
+desc {
+  display:none;
+}
+value:hover desc,
+skill name:hover desc,
+clicker:hover desc, 
+main-label:hover + desc,
+box-bg:hover > main-label,
+image:hover > desc
+{
+  display: block;
+  position: absolute;
+  color: black;
+  background: white;
+  padding: 0.2em;
+  border: 0.1em solid black;
+  margin-top: 1em;
+  font-size: 10px;
+  z-index: 1;
+}
+
+pline mult {
+  display: none;
+}
+#main_bars skill:nth-child(n + 2) val {
+  display: none;
+}
+#main_bars {
+  display: block;
+  margin: 0.5em;
+}
+pbar {
+  display: block;
+  height: 0.8rem;
+  background-color: white;
+  border: 0.1rem solid black;
+}
+#things skill {
+  display: flex;
+  user-select: none;
+  width: 100%;
+}
+#things pline { order: -2; }
+#things val {
+  order: -1;
+  margin: 0em 0.5em;
+}
+#things pbar, #mission_items pbar {
+  display: inline-block;
+  height: 0.8rem;
+  background-color: white;
+  border: 0.1rem solid black;
+  width: 3em;
+}
+#mission_desc {
+  display: block;
+  margin: 0.7em;
+}
+#mission_items {
+  display: flex;
+  flex-flow: column wrap;
+}
+#mission_items skill {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: flex-end;
+}
+#mission_items val {
+  margin: 0 0.4em;
+}
+pbar exp {
+  display: block;
+  background-color: darkgrey;
+  color: #D8D8D8;
+  font-size: 0.6em;
+  height: 0.8rem;
+  
+}
+skill clickers clickbox {
+  display: block;
+}
+
+clicker clickbox {
+  display: inline-block;
+  user-select: none;
+  border: 0.08rem solid black;
+  border-radius: 0.4em;
+  min-width: 1em;
+  min-height: 1em;
+  padding: 0.2em;
+  background-color: #ddd;
+}
+
+clicker:hover:not(.disabled):not(:active) clickbox {
+  box-shadow: 0.1rem 0.1rem 0.2rem black;
+  z-index: 1;
+}
+clicker:active:not(.disabled) clickbox {
+  z-index: 1;
+}
+
+clicker.disabled clickbox {
+  background: transparent;
+  border: 0.08rem solid grey;
+  color: #ccc;
+}
+.autoclick clickbox {
+  border-radius: 0em;
+}
+
+image {
+  padding: .5em;
+}
+img {
+  display: block;
+  height: 3em;
+}
+
+
+#area_tabs clicker clickbox {
+  display: inline-block;
+  user-select: none;
+  border: 0.08rem solid black;
+  border-radius: 0em;
+  min-width: 1em;
+  min-height: 1em;
+  padding: 0.2em;
+  background-color: white;
+  border-bottom: none;
+  margin-right: 0.2em;
+}
+
+#area_tabs clicker:hover:not(.disabled):not(:active) clickbox {
+  box-shadow: none;
+  z-index: 1;
+}
+#area_tabs clicker:active:not(.disabled) clickbox {
+  z-index: 1;
+}
+
+#area_tabs clicker.disabled clickbox {
+  background: #eee;
+  border: 0.08rem solid grey;
+  border-bottom: none;
+  color: black;
+}
+
+#area {
+  display: flex;
+  justify-content: space-between; 
+  background: #eee;
+}
+
+#things {
+  display: flex;
+  flex-flow: column;
+  padding: 0.2em;
+}
+
+#actions {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  align-content: flex-start;
+  max-width: 300px;
+}
+#actions clicker {
+  margin: 0.1em;
+}
+
+#actions desc {
+  left: 250px;
+}
+
+#missions desc {
+  display: none;
+}
+
